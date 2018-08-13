@@ -1,0 +1,26 @@
+{
+  "name": "mp_vampire",
+  "version": "1.0.0",
+  "description": "my min program",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yulongge/mp_vampire.git"
+  },
+  "author": "geyulong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yulongge/mp_vampire/issues"
+  },
+  "homepage": "https://github.com/yulongge/mp_vampire#readme",
+  "devDependencies": {
+    "fs-extra": "^7.0.0",
+    "fs-watch-tree": "^0.2.5",
+    "klaw-sync": "^4.0.0",
+    "less": "^3.8.1",
+    "watch": "^1.0.2"
+  }
+}

@@ -1,0 +1,5 @@
+/*由 css/pages/index/index.less 生成，请勿手动修改以免被覆盖！*/
+.tools_list .toolsItem {
+  display: inline-block;
+  width: 50%;
+}

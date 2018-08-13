@@ -1,0 +1,4 @@
+/*由 css/app.less 生成，请勿手动修改以免被覆盖！*/
+page {
+  background-color: #fff;
+}

@@ -1,0 +1,8 @@
+<view class="tools_item">
+	<image  
+		class="icon" 
+		mode="scaleToFill" 
+		src="https://yulongge.github.io/images/min_programs/vampire/banner1.jpeg" />
+	<text class="name">{{data.name}}</text>
+	<text class="desc">{{data.t_desc}}</text>
+</view>	

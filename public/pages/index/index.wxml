@@ -1,0 +1,7 @@
+<view class="index_page">
+	<view class="tools_list">
+		<block wx:for="{{tools}}" wx:key="{{item.id}}">
+			<ToolsItem class="toolsItem" data="{{item}}"/>
+		</block>
+	</view>
+</view>
