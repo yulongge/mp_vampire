@@ -1,33 +1,74 @@
-.tools_item {
-	width: 90%;
-	height: 200rpx;
-	border: 1px solid #efefef;
-	box-sizing: border-box;
-	margin: auto;
-	background: #333;
-	border-radius: 10px;
-	margin-top: 20rpx;
-	color: #333;
-	//background: url("https://yulongge.github.io/images/min_programs/vampire/banner1.jpeg");
-	background-size: cover;
-	.icon {
-		width: 100%;
-		height: 100%;
-		border-radius: 20rpx;
-		display: block;
-	}
-	.name {
-		display: block;
-		width: 100%;
-		height: 30rpx;
-		font-size: 28rpx;
-		margin-top: 10rpx;
-	}
-	.desc {
-		display: block;
-		width: 100%;
-		height: 80rpx;
-		font-size: 20rpx;
-		margin-top: 10rpx;
-	}
+
+.item__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //width: 100%;
+  height: 220px;
+  font-size: 40px;
+  color: #070319;
+  background: currentColor;
+  box-sizing: border-box;
+  color: #18314f;
+  &:hover {
+    background: #22446e;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    background-color: #8aafdc;
+    //content: counter(item-counter);
+  }
+  &:after {
+    color: #010003;
+    content: 'ಠ‿ಠ';
+  }
+}
+.item__content--small {
+  color: #8bbeb2;
+  height: 100px;
+  &:hover {
+    background: #a5cdc3;
+  }
+  &:before {
+    background: #080f0d;
+  }
+  &:after {
+    content: '♥◡♥';
+  }
+}
+.item__content--medium {
+  color: #e6f9af;
+  height: 175px;
+  &:hover {
+    background: #f2fcd5;
+  }
+  &:before {
+    background: #546e08;
+  }
+  &:after {
+    content: '◔ᴗ◔';
+  }
+}
+.item__content--large {
+  color: #384e77;
+  height: 280px;
+  &:hover {
+    background: #456093;
+  }
+  &:before {
+    background: #c9d3e5;
+  }
+  &:after {
+    content: 'ಠ_๏';
+  }
 }

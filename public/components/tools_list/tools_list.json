@@ -1,0 +1,6 @@
+{
+	"component": true,
+	"usingComponents": {
+		"ToolsItem": "../tools_item/tools_item"
+	}
+}

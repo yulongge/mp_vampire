@@ -6,7 +6,6 @@ Page({
 		tools: []
 	},
 	onLoad() {
-		console.log('index coming...')
 		getTools({}, rst => {
 			this.setData({
 				tools: rst
