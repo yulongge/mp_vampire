@@ -1,0 +1,17 @@
+/*由 css/components/article_list/article_list.less 生成，请勿手动修改以免被覆盖！*/
+.tools_list {
+  display: flex;
+  box-sizing: border-box;
+  padding-bottom: 240rpx;
+}
+.tools_list .tools_list_lf,
+.tools_list .tools_list_rt {
+  flex: 1;
+  box-sizing: border-box;
+}
+.tools_list .tools_list_lf {
+  padding-right: 10rpx;
+}
+.tools_list .tools_list_rt {
+  padding-left: 10rpx;
+}

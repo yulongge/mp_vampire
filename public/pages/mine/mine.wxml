@@ -1,0 +1,11 @@
+<view class="mine_page">
+	<scroll-view 
+		class="main"
+		scroll-y="{{true}}">
+		<view class="mine_center">
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+	</scroll-view>
+</view>
+
+

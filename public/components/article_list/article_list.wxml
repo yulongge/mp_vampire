@@ -1,0 +1,12 @@
+<view class="tools_list">
+	<view class="tools_list_lf">
+		<block wx:for="{{tools_lf}}" wx:key="{{item.id}}">
+			<Articletem data="{{item}}" />
+		</block>
+	</view>
+	<view class="tools_list_rt">
+		<block wx:for="{{tools_rt}}" wx:key="{{item.id}}">
+			<Articletem data="{{item}}" />
+		</block>
+	</view>
+</view>

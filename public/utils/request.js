@@ -9,7 +9,7 @@ const _request = (method, url, data, success, onfail=null) => {
 		method: method.toUpperCase(),
 		header: {},
 		success(res) {
-			console.log(res, success, 'success');
+			//console.log(res, success, 'success');
 			const data = res.data;
 			if (typeof success === 'function') {
 				success(data.result);

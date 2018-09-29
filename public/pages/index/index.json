@@ -1,5 +1,6 @@
 {
 	"usingComponents": {
-		"ToolsList": "../../components/tools_list/tools_list"
-	}
+		"ArticleList": "../../components/article_list/article_list"
+	},
+	"backgroundColor": "#68838B"
 }

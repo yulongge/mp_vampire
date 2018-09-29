@@ -1,4 +1,4 @@
-/*由 css/components/tools_item/tools_item.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css/components/article_item/article_item.less 生成，请勿手动修改以免被覆盖！*/
 .item {
   width: 100%;
   margin: auto;
@@ -6,17 +6,14 @@
   background-color: #ffffff;
   border-radius: 10rpx;
   box-sizing: border-box;
-  display: flex;
 }
 .item .img {
-  width: 100rpx;
+  width: 100%;
 }
 .item .img image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 100%;
 }
 .item .msg {
-  flex: 1;
   padding: 20rpx;
 }
 .item .msg text {

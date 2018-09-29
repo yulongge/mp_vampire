@@ -1,4 +1,5 @@
 /*由 css/app.less 生成，请勿手动修改以免被覆盖！*/
 page {
-  background-color: #fff;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #00688B, #008B8B);
 }

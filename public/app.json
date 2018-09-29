@@ -1,9 +1,26 @@
 {
 	"pages": [
-		"pages/index/index"
+		"pages/index/index",
+		"pages/tool/tool",
+		"pages/mine/mine"
 	],
 	"window": {
-		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTextStyle": "black"
-	} 
+		"navigationBarTextStyle": "white",
+		"navigationBarBackgroundColor": "#00688B",
+		"backgroundColor": "#00688B",
+		"backgroundColorTop": "#00688B",
+		"backgroundColorBottom": "#008B8B"
+	},
+	"tabBar": {
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/tool/tool",
+			"text": "工具"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"text": "我的"
+		}]
+	}
 }
