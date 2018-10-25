@@ -1,9 +1,9 @@
-<view class="item" >
+<view class="item" bindtap="_toArticleDetail">
 	<view class="img">
-		<image src=""/>
+		<image src="{{data.a_icon}}"/>
 	</view>
 	<view class="msg">
-		<text class="name">{{data.name}}</text>
-		<text class="desc">{{data.t_desc}}</text>
+		<text class="name">{{data.a_title}}</text>
+		<text class="desc">{{data.a_desc}}</text>
 	</view>
 </view>

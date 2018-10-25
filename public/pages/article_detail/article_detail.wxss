@@ -1,0 +1,34 @@
+/*由 css/pages/article_detail/article_detail.less 生成，请勿手动修改以免被覆盖！*/
+.article_detail_page .con {
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.article_detail_page .con::-webkit-scrollbar {
+  display: none;
+}
+.article_detail_page .con .title {
+  color: #fff;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.article_detail_page .con .desc {
+  color: #fff;
+  font-size: 24rpx;
+}
+.article_detail_page .con .img {
+  width: 100%;
+  margin-top: 30rpx;
+}
+.article_detail_page .con .img image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+.article_detail_page .con .content {
+  color: #fff;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}

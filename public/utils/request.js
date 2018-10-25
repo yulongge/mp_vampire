@@ -1,7 +1,8 @@
 const { server_host, server_port, server_protocal } = require('../app.config.js');
+const { show_loading, hide_loading } = require('./wxapi');
 
 const _request = (method, url, data, success, onfail=null) => {
-
+	show_loading();
 	const reqData = {};
 	wx.request({
 		url: `${server_protocal}://${server_host}:${server_port}${url}`,
@@ -19,7 +20,7 @@ const _request = (method, url, data, success, onfail=null) => {
 		
 		},
 		complete(res) {
-		
+			hide_loading();
 		}
 	})
 }

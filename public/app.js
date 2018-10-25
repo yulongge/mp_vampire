@@ -1,5 +1,6 @@
 const {initApp} = require('./utils/app_requests');
 const {assign} = require('./utils/object');
+const Towxml = require('./towxml/main');
 let _app = null;
 
 App({
@@ -19,5 +20,6 @@ App({
 	},
 	onShow() {
 		console.log("onShow coming...")
-	}
+	},
+	towxml:new Towxml()
 })

@@ -10,7 +10,10 @@
 		<ArticleList tools="{{tools}}"/>
 	</scroll-view>
 	<view class="focus">
-		<official-account></official-account>
+		<view class="con">
+			<official-account></official-account>
+		</view>
+		
 	</view>
 	
 </view>

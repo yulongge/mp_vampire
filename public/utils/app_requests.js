@@ -16,8 +16,17 @@ const getTools = (data, callback) => request(
 	callback
 );
 
+//文章列表
+const getArticle = (data, callback) => request(
+	'GET',
+	`${server_prefix}/article`,
+	{data},
+	callback
+);
+
 
 module.exports = {
 	initApp,
-	getTools
+	getTools,
+	getArticle
 }

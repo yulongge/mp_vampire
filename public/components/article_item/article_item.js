@@ -19,9 +19,12 @@ Component({
 		//console.log(this.data.data, 'ready');	
 	},
 	methods: {
-		
-		onLoad() {
-			//console.log(this.data.style, 'onLoad')
+		_toArticleDetail() {
+			console.log(this.data.data, 'toArticle')
+			wx.setStorageSync("currentArticle", this.data.data);
+			wx.navigateTo({
+				url: "/pages/article_detail/article_detail"
+			})
 		}	
 	}
 })

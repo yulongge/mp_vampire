@@ -18,10 +18,11 @@ Component({
 		})
 		//console.log(this.data.data, 'ready');	
 	},
-	methods: {
-		
-		onLoad() {
-			//console.log(this.data.style, 'onLoad')
+	methods: {	
+		_toToolPage() {
+			wx.navigateTo({
+				url: "/pages/waiting/waiting"
+			})
 		}	
 	}
 })

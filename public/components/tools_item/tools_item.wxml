@@ -1,6 +1,6 @@
-<view class="item" >
+<view class="item" bindtap="_toToolPage">
 	<view class="img">
-		<image src=""/>
+		<image src="https://geyulong.tech/images/mp/article/article1.png"/>
 	</view>
 	<view class="msg">
 		<text class="name">{{data.name}}</text>

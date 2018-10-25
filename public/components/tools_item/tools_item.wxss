@@ -13,7 +13,9 @@
 }
 .item .img image {
   width: 100rpx;
-  height: 100rpx;
+  height: 100%;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
 }
 .item .msg {
   flex: 1;

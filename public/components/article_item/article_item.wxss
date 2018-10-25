@@ -9,9 +9,11 @@
 }
 .item .img {
   width: 100%;
+  border-radius: 10rpx;
 }
 .item .img image {
   width: 100%;
+  border-radius: 10rpx;
 }
 .item .msg {
   padding: 20rpx;

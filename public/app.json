@@ -2,7 +2,10 @@
 	"pages": [
 		"pages/index/index",
 		"pages/tool/tool",
-		"pages/mine/mine"
+		"pages/mine/mine",
+    "pages/article/article",
+    "pages/article_detail/article_detail",
+    "pages/waiting/waiting"
 	],
 	"window": {
 		"navigationBarTextStyle": "white",

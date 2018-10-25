@@ -1,4 +1,4 @@
-const {getTools} = require('../../utils/app_requests');
+const {getArticle} = require('../../utils/app_requests');
 const {assign} = require('../../utils/object');
 
 Page({
@@ -6,7 +6,7 @@ Page({
 		tools: []
 	},
 	onLoad() {
-		getTools({}, rst => {
+		getArticle({}, rst => {
 			this.setData({
 				tools: rst
 			})

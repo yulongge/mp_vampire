@@ -12,7 +12,16 @@ page .main {
   height: 100vh;
   padding: 0rpx 20rpx 20rpx 20rpx;
   box-sizing: border-box;
+  padding: 40rpx 0rpx;
 }
-page .main::-webkit-scrollbar {
-  display: none;
+page .main .mine_center {
+  width: 100%;
+  height: 300rpx;
+}
+page .main .mine_center .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: auto;
 }
