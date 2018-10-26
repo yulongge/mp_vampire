@@ -31,7 +31,7 @@ Page({
 			let data = app.towxml.toJson(res.data,'markdown');
 
 			//设置文档显示主题，默认'light'
-			data.theme = 'dark';
+			//data.theme = 'dark';
 
 			//设置数据
 			_ts.setData({
@@ -87,6 +87,20 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+	const currentArticle = wx.getStorageSync("currentArticle");
+	return {
+		title: currentArticle.a_title,
+		path: currentArticle.a_path,
+		imageUrl: currentArticle.a_icon,
+		success: res => {
 
+		},
+		fail: res => {
+
+		},
+		complete: res => {
+
+		}
+	}
   }
 })

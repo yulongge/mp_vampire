@@ -6,7 +6,7 @@
 }
 .tools_list .tools_list_lf,
 .tools_list .tools_list_rt {
-  flex: 1;
+  width: 50%;
   box-sizing: border-box;
 }
 .tools_list .tools_list_lf {

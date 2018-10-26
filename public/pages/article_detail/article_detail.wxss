@@ -1,4 +1,8 @@
 /*由 css/pages/article_detail/article_detail.less 生成，请勿手动修改以免被覆盖！*/
+@import '../../towxml/style/main.wxss';
+
+@import '../../towxml/style/theme/light.wxss';
+
 .article_detail_page .con {
   width: 100%;
   overflow: auto;
