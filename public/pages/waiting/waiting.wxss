@@ -1,6 +1,7 @@
-/*由 css/pages/waiting/waiting.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css\pages\waiting\waiting.less 生成，请勿手动修改以免被覆盖！*/
 .waiting_page {
   padding: 20rpx;
+  background: linear-gradient(to bottom, #00688B, #008B8B);
 }
 .waiting_page .msg {
   text-align: center;

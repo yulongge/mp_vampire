@@ -1,13 +1,14 @@
-/*由 css/pages/article_detail/article_detail.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css\pages\article_detail\article_detail.less 生成，请勿手动修改以免被覆盖！*/
 @import '../../towxml/style/main.wxss';
 
 @import '../../towxml/style/theme/light.wxss';
 
+.article_detail_page {
+  background-color: #00688B;
+}
 .article_detail_page .con {
   width: 100%;
-  overflow: auto;
   overflow-x: hidden;
-  height: 100vh;
   padding: 20rpx;
   box-sizing: border-box;
 }
@@ -35,4 +36,7 @@
   color: #fff;
   font-size: 30rpx;
   margin-top: 30rpx;
+}
+.article_detail_page .con .content .h2w {
+  border-radius: 10rpx;
 }

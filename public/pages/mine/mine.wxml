@@ -8,8 +8,6 @@
 			</view>
 		</view>
 
-		<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取您的电话信息</button> 
-
 	</scroll-view>
 </view>
 

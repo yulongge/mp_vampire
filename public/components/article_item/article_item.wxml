@@ -1,6 +1,6 @@
 <view class="item" bindtap="_toArticleDetail">
 	<view class="img">
-		<image src="{{data.a_icon}}"/>
+		<image src="{{data.a_icon}}" mode="widthFix"/>
 	</view>
 	<view class="msg">
 		<text class="name">{{data.a_title}}</text>

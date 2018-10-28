@@ -11,4 +11,6 @@
 			<template is="entry" data="{{...article}}"/>
 		</view>
 	</view>
+
+	<HomeIcon />
 </view>

@@ -24,9 +24,18 @@ const getArticle = (data, callback) => request(
 	callback
 );
 
+//文章详情
+const getArticleDetail = (data, callback) => request(
+	'GET',
+	`${server_prefix}/article/${data.id}`,
+	{data},
+	callback
+);
+
 
 module.exports = {
 	initApp,
 	getTools,
-	getArticle
+	getArticle,
+	getArticleDetail
 }

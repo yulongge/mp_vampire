@@ -1,0 +1,3 @@
+<view class="home_icon_component">
+    <image src="../../images/home.png" bindtap="toHome"/>
+</view>

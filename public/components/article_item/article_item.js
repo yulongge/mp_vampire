@@ -23,7 +23,7 @@ Component({
 			console.log(this.data.data, 'toArticle')
 			wx.setStorageSync("currentArticle", this.data.data);
 			wx.navigateTo({
-				url: "/pages/article_detail/article_detail"
+				url: "/pages/article_detail/article_detail?article_id=" + this.data.data.id
 			})
 		}	
 	}
