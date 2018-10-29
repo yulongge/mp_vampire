@@ -6,7 +6,9 @@ Page({
    */
   data: {
 	src: "",
-	isWifi: true
+  isWifi: true,
+  isPlay: false,
+  videoSize: 6
   },
 
   /**
@@ -20,7 +22,8 @@ Page({
 			if(networkType != "wifi") {
 				_this.setData({
 					isWifi: false
-				})
+        })
+        _this.videoCtx.pause()
 			} else {
 				_this.setData({
 					isWifi: true
@@ -42,7 +45,8 @@ Page({
 		if(networkType != "wifi") {
 			_this.setData({
 				isWifi: false
-			})
+      })
+      _this.videoCtx.pause()
 		} else {
 			_this.setData({
 				isWifi: true
@@ -66,11 +70,20 @@ Page({
   },
 
   play() {
+    this.setData({
+      isPlay: true
+    })
     this.videoCtx.play()
   },
   
   pause() {
     this.videoCtx.pause()
+  },
+
+  endVideo() {
+    this.setData({
+      isPlay: false
+    })
   }
 
   

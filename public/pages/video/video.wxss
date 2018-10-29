@@ -1,4 +1,4 @@
-/*由 css/pages/video/video.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css\pages\video\video.less 生成，请勿手动修改以免被覆盖！*/
 .view_page {
   padding: 20rpx;
   background: linear-gradient(to bottom, #00688B, #008B8B);
@@ -13,27 +13,41 @@
 .view_page .wifitip {
   color: #fff;
 }
-.view_page .controls {
+.view_page #myVideo {
+  position: relative;
+}
+.view_page .decorate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+}
+.view_page .decorate .controls {
   position: relative;
   top: 50%;
   height: 50px;
   margin-top: -25px;
   display: flex;
 }
-.view_page .play,
-.view_page .pause,
-.view_page .time {
+.view_page .decorate .play,
+.view_page .decorate .pause,
+.view_page .decorate .size {
   flex: 1;
   height: 100%;
 }
-.view_page .time {
+.view_page .decorate .size {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   line-height: 50px;
 }
-.view_page .img {
+.view_page .decorate .img {
   width: 40px;
   height: 40px;
   margin: 5px auto;
+}
+.view_page .playing {
+  background: transparent;
 }
