@@ -1,0 +1,15 @@
+/*由 css/pages/video/video.less 生成，请勿手动修改以免被覆盖！*/
+.view_page {
+  padding: 20rpx;
+  background: linear-gradient(to bottom, #00688B, #008B8B);
+  min-height: 100vh;
+}
+.view_page video {
+  width: 100%;
+}
+.view_page .btn-area {
+  margin-top: 20rpx;
+}
+.view_page .wifitip {
+  color: #fff;
+}

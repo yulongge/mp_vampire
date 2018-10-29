@@ -1,4 +1,4 @@
-/*由 css\components\tools_item\tools_item.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css/components/tools_item/tools_item.less 生成，请勿手动修改以免被覆盖！*/
 .item {
   width: 100%;
   margin: auto;
@@ -9,11 +9,14 @@
   display: flex;
 }
 .item .img {
-  width: 100rpx;
+  width: 150rpx;
+  padding: 5rpx;
+  box-sizing: border-box;
+  text-align: center;
 }
 .item .img image {
-  width: 100rpx;
-  height: 100%;
+  max-width: 100rpx;
+  max-height: 100rpx;
   border-top-left-radius: 10rpx;
   border-bottom-left-radius: 10rpx;
 }

@@ -5,14 +5,16 @@
 		"pages/mine/mine",
     "pages/article/article",
     "pages/article_detail/article_detail",
-    "pages/waiting/waiting"
+    "pages/waiting/waiting",
+    "pages/video/video"
 	],
 	"window": {
 		"navigationBarTextStyle": "white",
 		"navigationBarBackgroundColor": "#00688B",
 		"backgroundColor": "#00688B",
 		"backgroundColorTop": "#00688B",
-		"backgroundColorBottom": "#008B8B"
+		"backgroundColorBottom": "#008B8B",
+		"navigationBarTitleText": "Vampire"
 	},
 	"tabBar": {
 		"list": [{

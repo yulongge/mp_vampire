@@ -1,4 +1,4 @@
-/*由 css\components\tools_list\tools_list.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css/components/tools_list/tools_list.less 生成，请勿手动修改以免被覆盖！*/
 .tools_list {
   box-sizing: border-box;
   padding-bottom: 240rpx;

@@ -1,0 +1,12 @@
+<view class="view_page">
+	<video 
+		src="{{src}}"
+		poster="https://yulongge.github.io/images/server/article/requestAnimation.jpeg"  
+		controls >
+	</video>
+
+	<text class="wifitip"> {{isWifi ? '当前在wifi环境下': '当前在用移动网络'}}</text>
+	<view class="btn-area">
+		<button bindtap="bindButtonTap">获取视频</button>
+	</view>
+</view>

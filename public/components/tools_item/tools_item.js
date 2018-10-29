@@ -20,8 +20,9 @@ Component({
 	},
 	methods: {	
 		_toToolPage() {
+			const {t_url} = this.data.data;
 			wx.navigateTo({
-				url: "/pages/waiting/waiting"
+				url: t_url//"/pages/waiting/waiting"
 			})
 		}	
 	}

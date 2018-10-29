@@ -1,4 +1,4 @@
-/*由 css\components\article_list\article_list.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css/components/article_list/article_list.less 生成，请勿手动修改以免被覆盖！*/
 .tools_list {
   display: flex;
   box-sizing: border-box;

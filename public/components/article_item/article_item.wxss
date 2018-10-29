@@ -1,4 +1,4 @@
-/*由 css\components\article_item\article_item.less 生成，请勿手动修改以免被覆盖！*/
+/*由 css/components/article_item/article_item.less 生成，请勿手动修改以免被覆盖！*/
 .item {
   width: 100%;
   margin: auto;
@@ -24,8 +24,10 @@
 }
 .item .msg .name {
   color: #000;
+  word-break: break-all;
 }
 .item .msg .desc {
   font-size: 24rpx;
   color: #999;
+  word-break: break-all;
 }
