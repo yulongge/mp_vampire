@@ -13,3 +13,27 @@
 .view_page .wifitip {
   color: #fff;
 }
+.view_page .controls {
+  position: relative;
+  top: 50%;
+  height: 50px;
+  margin-top: -25px;
+  display: flex;
+}
+.view_page .play,
+.view_page .pause,
+.view_page .time {
+  flex: 1;
+  height: 100%;
+}
+.view_page .time {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  line-height: 50px;
+}
+.view_page .img {
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+}

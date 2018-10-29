@@ -36,6 +36,7 @@ Page({
    */
   onReady() {
 	const _this = this;
+	this.videoCtx = wx.createVideoContext('myVideo');
 	wx.onNetworkStatusChange(function (res) {
 		const networkType = res.networkType;
 		if(networkType != "wifi") {
@@ -62,6 +63,14 @@ Page({
         })
       }
     })
+  },
+
+  play() {
+    this.videoCtx.play()
+  },
+  
+  pause() {
+    this.videoCtx.pause()
   }
 
   
