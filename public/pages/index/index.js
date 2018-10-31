@@ -5,7 +5,8 @@ Page({
 	data: {
 		tools: []
 	},
-	onLoad() {
+
+	_init() {
 		getArticle({}, rst => {
 			this.setData({
 				tools: rst
@@ -13,9 +14,23 @@ Page({
 			console.log(rst, 'getTools')
 		})
 	},
-	onShareAppMessage: function (res) {
+
+	onShow() {
+		this._init();
+	},
+
+	onLoad() {
+		
+	},
+
+	onShareAppMessage(res) {
 		return {
 		  title: 'Vampire'
 		}
-	  }
+	},
+
+	onPullDownRefresh() {
+		this._init();
+		wx.stopPullDownRefresh();
+	}
 })
