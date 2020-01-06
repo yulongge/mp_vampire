@@ -1,9 +1,0 @@
-<view class="item" bindtap="_toToolPage">
-	<view class="img">
-		<image src="{{data.t_icon}}" mode="aspectFit"/>
-	</view>
-	<view class="msg">
-		<text class="name">{{data.name}}</text>
-		<text class="desc">{{data.t_desc}}</text>
-	</view>
-</view>

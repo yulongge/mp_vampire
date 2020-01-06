@@ -1,0 +1,20 @@
+@startuml
+start
+
+while(state change)
+:vue view;
+-> emit(publish);
+
+:Controller;
+
+-> on(subscribe);
+
+:Ctrl Middle;
+
+-> send;
+
+:Model Xstate;
+endwhile
+
+end
+@enduml

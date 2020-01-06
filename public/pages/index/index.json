@@ -1,7 +1,0 @@
-{
-	"usingComponents": {
-		"ArticleList": "../../components/article_list/article_list"
-	},
-	"backgroundColor": "#68838B",
-	"enablePullDownRefresh": true
-}

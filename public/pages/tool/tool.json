@@ -1,6 +1,0 @@
-{
-	"navigationBarTitleText": "Vampire Tools",
-	"usingComponents": {
-		"ToolsList": "../../components/tools_list/tools_list"
-	}
-}

@@ -1,0 +1,22 @@
+@startuml
+
+start
+
+while(state change?)
+:demo view;
+-> emit;
+
+:Demo Controller;
+
+-> on;
+
+:Demo Ctrl Middle;
+
+-> send;
+
+:Demo State;
+endwhile
+
+end
+
+@enduml

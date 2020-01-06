@@ -1,9 +1,0 @@
-/*由 css\components\home_icon\home_icon.less 生成，请勿手动修改以免被覆盖！*/
-.home_icon_component image {
-  position: fixed;
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 100%;
-  bottom: 20rpx;
-  right: 20rpx;
-}

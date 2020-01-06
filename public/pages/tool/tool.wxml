@@ -1,7 +1,0 @@
-<view class="tool_page">
-	<scroll-view 
-		class="main"
-		scroll-y="{{true}}">
-		<ToolsList tools="{{tools}}"/>
-	</scroll-view>
-</view>

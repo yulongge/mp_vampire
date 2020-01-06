@@ -1,0 +1,23 @@
+@startuml
+
+start
+
+while(state change?)
+:demo-cart view;
+-> emit;
+
+:DemoCart Controller;
+
+-> on;
+
+:DemoCart Ctrl Middle;
+
+-> send;
+
+:DemoCart State;
+endwhile
+
+end
+
+@enduml
+
