@@ -4,7 +4,16 @@ if (process.env.UNI_OPT_TREESHAKINGNG) {
   plugins.push(require('@dcloudio/vue-cli-plugin-uni-optimize/packages/babel-plugin-uni-api/index.js'))
 }
 
-if (process.env.UNI_PLATFORM === 'app-plus' && process.env.UNI_USING_V8) {
+if (
+  (
+    process.env.UNI_PLATFORM === 'app-plus' &&
+    process.env.UNI_USING_V8
+  ) ||
+  (
+    process.env.UNI_PLATFORM === 'h5' &&
+    process.env.UNI_H5_BROWSER === 'builtin'
+  )
+) {
   const path = require('path')
 
   const isWin = /^win/.test(process.platform)
@@ -41,18 +50,14 @@ process.UNI_LIBRARIES.forEach(libraryName => {
   ])
 })
 module.exports = {
-	presets: [
-		[
-			'@vue/app',
-			{
-				modules: 'commonjs',
-				useBuiltIns: process.env.UNI_PLATFORM === 'h5' ? 'usage' : 'entry'
-			}
-		]
-	],
-	plugins: [
-		...plugins,
-		["@babel/plugin-proposal-decorators", { "legacy": true }],
-		["@babel/plugin-proposal-class-properties",{ "loose": true }] 
-	]
+  presets: [
+    [
+      '@vue/app',
+      {
+        modules: 'commonjs',
+        useBuiltIns: process.env.UNI_PLATFORM === 'h5' ? 'usage' : 'entry'
+      }
+    ]
+  ],
+  plugins
 }

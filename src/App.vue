@@ -1,17 +1,17 @@
 <script>
-import AppModel from '@/models/AppModel';
-import AppCtrl from '@/controllers/AppSub';
-
-const {emitService} = AppModel;
-export default {
-		onLaunch(launchParams) {
-			AppCtrl.emit('app.init', emitService);
+	export default {
+		onLaunch: function() {
+			console.log('App Launch')
 		},
-		onShow(showParams) {
-			console.log(showParams, 'app onShow');
+		onShow: function() {
+			console.log('App Show')
 		},
-		onHide() {
-			console.log('app onHide');
+		onHide: function() {
+			console.log('App Hide')
 		}
 	}
 </script>
+
+<style>
+	/*每个页面公共css */
+</style>
