@@ -8,7 +8,7 @@ export function hideLoading() {
 	uni.hideLoading();
 }
 
-export function showTost(errmsg, duration = 2000) {
+export function showToast(errmsg, duration = 2000) {
 	uni.showToast({
 		title: errmsg,
 		icon: 'none',

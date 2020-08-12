@@ -1,11 +1,4 @@
-import ordermeal from './ordermeal';
-import dinnertype from './dinnertype';
-import checkbill from './checkbill';
-import dish from './dish';
+import index from './index';
 module.exports = {
-	currency: '¥',
-	ordermeal,
-	dish,
-	dinnertype,
-	checkbill
+	index
 }
