@@ -1,7 +1,6 @@
 <script>
 	export default {
 		onLaunch: function() {
-			console.log('App Launch')
 			if(!wx.cloud) {
 				console.error('请使用2.2.3或以上的基础库版本，进行云开发')
 			} else {
@@ -10,12 +9,14 @@
 					env: "vampire-gyl"
 				})
 			}
+
+
 		},
 		onShow: function() {
-			console.log('App Show')
+			this.$store.dispatch("config/getConfig");
 		},
 		onHide: function() {
-			console.log('App Hide')
+			//console.log('App Hide')
 		}
 	}
 </script>

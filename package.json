@@ -37,7 +37,11 @@
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
+    "mock": "nodemon ./config/mock.server.js",
+    "reset": "node ./config/api.server.js",
+    "reset_ip": "npm run reset -ip=1 -port=9090",
+    "reset_local": "npm run reset -ip=localhost -port=9090"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-28320200727001",
@@ -74,10 +78,12 @@
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
+    "klaw-sync": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
+    "node-file-eval": "^1.0.0",
     "postcss-comment": "^2.0.0",
     "vue-template-compiler": "^2.6.11"
   },
