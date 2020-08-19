@@ -5,7 +5,9 @@
 			<view class="content">
 				<view v-if="item.type ==1">
 					<view class="list" v-for="s_item in item.list" :key="s_item.id">
-						<view class="pic"></view>
+						<view class="pic">
+							
+						</view>
 						<view class="msg">
 							<text class="s_title">{{s_item.title}}</text>
 							<text class="s_title">{{s_item.desc}}</text>
@@ -33,7 +35,20 @@ export default {
 		})
 	},
 	onLoad() {
-		console.log(this, 'onLoad')
+		uni.showLoading({
+			title: '处理中...'
+		})
+		uniCloud.callFunction({
+			name: 'config',
+			data: {
+				name: 'DCloud',
+				subType: 'uniCloud',
+				createTime: Date.now()
+			}
+		}).then((res) => {
+			uni.hideLoading();
+			console.log(res, 'res')
+		})
 	},
 	methods: {
 
