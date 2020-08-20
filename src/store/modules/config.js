@@ -1,6 +1,6 @@
 import {
-	getInitConfig
-} from '../../common/app_request';
+	getConfig
+} from '../../common/cloud_request.js';
 
 const state = () => {
 	return {
@@ -18,7 +18,9 @@ const getters = {
 
 const actions = {
 	getConfig({state, commit}, config) {
-		getInitConfig({}).then(rst => {
+		getConfig({name: 'DCloud',
+				subType: 'uniCloud',
+				createTime: Date.now()}).then(rst => {
 			console.log(rst, 'srst')
 			commit("initConfig", rst)
 		})
