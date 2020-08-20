@@ -1,19 +1,16 @@
 <template>
 	<view class="home-card" :class="cardClass[data.type]">
-		<text class="title">{{data.title}}</text>
-		<view class="content">
-			<view v-if="data.type == 1">
-				<view class="list" v-for="s_item in data.list" :key="s_item.id">
-					<view class="pic">
-						
-					</view>
-					<view class="msg">
-						<text class="s_title">{{s_item.title}}</text>
-						<text class="s_title">{{s_item.desc}}</text>
-					</view>
-				</view>
+		<block v-if="data.type == 0">
+			<view class="avatar">
+				<open-data type="userAvatarUrl"></open-data>
 			</view>
-		</view>
+			<text class="brief">三尺微命，一介书生</text>
+		</block>
+		<block v-if="data.type == 1">
+			<text class="desc">{{data.desc}}</text>
+			<image class="bg" :src="data.bg" mode="widthFix" lazy-load="true"></image>
+		</block>
+		
 	</view>
 </template>
 

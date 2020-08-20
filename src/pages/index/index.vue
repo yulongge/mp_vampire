@@ -20,6 +20,7 @@ export default {
 	computed: {
 		...mapState({
 			config: state => state.config.config,
+			nav: state => state.config.nav,
 			cards: state => state.home.cards
 		})
 	},
