@@ -4,6 +4,21 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "Vampire"
+				
+			}
+		},
+		{
+			"path": "pages/article/article",
+			"style": {
+				"navigationBarTitleText": "Article",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "Mine",
+				"navigationStyle": "custom"
 			}
 		}
 	],
@@ -12,5 +27,6 @@
 		"navigationBarTitleText": "Vampire",
 		"navigationBarBackgroundColor": "#ffffff",
 		"backgroundColor": "#ffffff"
+		
 	}
 }

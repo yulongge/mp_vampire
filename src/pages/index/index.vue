@@ -1,13 +1,15 @@
 <template>
 	<view class="index-page">
 		<Card v-for="(item) in cards" :key="item.id" v-bind:data="item"/>
+		<Nav v-bind:data="nav" v-bind:currentId="0"/>
+		<official-account></official-account>
 	</view>
-	<official-account></official-account>
 </template>
 
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex'
 import Card from '@/components/card/card';
+import Nav from '@/components/nav/nav';
 
 export default {
 	data() {
@@ -16,7 +18,8 @@ export default {
 		}
 	},
 	components: {
-		Card
+		Card,
+		Nav
 	},
 	computed: {
 		...mapState({
