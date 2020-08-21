@@ -1,5 +1,5 @@
 <template>
-	<view class="index-page">
+	<view class="index-page" :style="{backgroundImage:'url(' + homeBg + ')'}">
 		<Card v-for="(item) in cards" :key="item.id" v-bind:data="item"/>
 		<Nav v-bind:data="nav" v-bind:currentId="0"/>
 		<official-account></official-account>
@@ -26,6 +26,7 @@ export default {
 			config: state => state.config.config,
 			nav: state => state.config.config.nav,
 			cards: state => state.home.cards,
+			homeBg: state => state.home.homeBg,
 			share: state => state.config.config.share
 		})
 	},

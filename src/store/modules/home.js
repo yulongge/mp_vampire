@@ -4,7 +4,8 @@ import {
 
 const state = () => {
 	return {
-		cards: []
+		cards: [],
+		homeBg: ""
 	}	
 }
 const getters = {
@@ -18,15 +19,16 @@ const actions = {
 	getHome({state, commit}, config) {
 		getHomeData({}).then(rst => {
 			console.log(rst, 'srst')
-			commit("initHome", rst.cards)
+			commit("initHome", rst)
 		})
 		
 	}
 }
 
 const mutations = {
-	initHome(state, cards) {
-		state.cards = cards;
+	initHome(state, data) {
+		state.cards = data.cards;
+		state.homeBg = data.bg;
 	}
 }
 

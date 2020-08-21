@@ -1,14 +1,18 @@
 <template>
-	<view class="nav">
-		<view 
-			@click="toPage(item)"
-			v-for="(item, index) in data" 
-			:key="item.id" 
-			class="nav-item">
-			<image :src="index == currentId ? item.a_icon : item.icon"></image>
-			<text>{{item.title}}</text>
-		</view>
-	</view>
+	<block>
+		<view class="navIcon"></view>
+		<!-- <view class="nav">
+			<view 
+				@click="toPage(item)"
+				v-for="(item, index) in data" 
+				:key="item.id" 
+				class="nav-item">
+				<image :src="index == currentId ? item.a_icon : item.icon"></image>
+				<text>{{item.title}}</text>
+			</view>
+		</view> -->
+	</block>
+	
 </template>
 
 <script>
