@@ -1,7 +1,7 @@
 <template>
 	<view class="index-page" :style="{backgroundImage:'url(' + homeBg + ')'}">
 		<Card v-for="(item) in cards" :key="item.id" v-bind:data="item"/>
-		<Nav v-bind:data="nav" v-bind:currentId="0"/>
+		<Nav v-bind:nav="nav" v-bind:currentId="0" v-bind:upNav="upNav"/>
 		<official-account></official-account>
 	</view>
 </template>
@@ -25,6 +25,7 @@ export default {
 		...mapState({
 			config: state => state.config.config,
 			nav: state => state.config.config.nav,
+			upNav: state => state.config.config.upNav,
 			cards: state => state.home.cards,
 			homeBg: state => state.home.homeBg,
 			share: state => state.config.config.share

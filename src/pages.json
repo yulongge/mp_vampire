@@ -21,6 +21,13 @@
 				"navigationBarTitleText": "Mine",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/addCard/addCard",
+			"style": {
+				"navigationBarTitleText": "添加",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

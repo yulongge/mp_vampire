@@ -18,10 +18,7 @@ const getters = {
 
 const actions = {
 	getConfig({state, commit}, config) {
-		getConfig({name: 'DCloud',
-				subType: 'uniCloud',
-				createTime: Date.now()}).then(rst => {
-			console.log(rst, 'srst')
+		getConfig({}).then(rst => {
 			commit("initConfig", rst)
 		})
 		

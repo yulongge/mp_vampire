@@ -1,12 +1,15 @@
 .nav {
 	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
+	//left: 0;
+	bottom: 80rpx;
+	right: 200rpx;
+	//width: 100%;
 	height: 106rpx;
 	display: flex;
 	//border-top: 1px solid #3F536E;
-	background-color: #FFFFFF;
+	//background-color: #FFFFFF;
+	animation: navShow 1s;
+	z-index: 10;
 	.nav-item {
 		flex: 1;
 		display: flex;
@@ -15,19 +18,47 @@
 		color: #2C405A;
 		font-size: 20rpx;
 		padding: 10rpx 0rpx;
+		margin-right: 30rpx;
 		image {
 			width: 100%;
 		}
 	}
 }
+	
+.upNav {
+	position: fixed;
+	bottom: 240rpx;
+	right: 50rpx;
+	width: 80rpx;
+	animation: upNavShow 1s;
+	//z-index: 10;
+	.nav-item {
+		image {
+			height: 80rpx;
+			width: 80rpx;
+		}
+	}
+}
 .navIcon {
 	position: fixed;
-	bottom: 100rpx;
+	bottom: 80rpx;
 	right: 30rpx;
-	width: 160rpx;
-	height: 160rpx;
+	width: 120rpx;
+	height: 120rpx;
 	background-image: url(https://7661-vampire-2d0c42-1302906344.tcb.qcloud.la/images/icon/menu.svg);
 	background-size: contain;
-	background-color: #FFFFFF;
-	border-radius: 80rpx;
+	//background-color: #FFFFFF;
+	border-radius: 60rpx;
+	box-shadow: 0px 10px 12px #d01c0c;
+	z-index: 90;
+}
+
+@keyframes navShow {
+	from {right: 30rpx;}
+	to {right: 200rpx;}
+}
+
+@keyframes upNavShow {
+	from {bottom: 80rpx;}
+	to {bottom: 240rpx;}
 }
