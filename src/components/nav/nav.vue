@@ -11,7 +11,7 @@
 				<text>{{item.title}}</text>
 			</view>
 		</view>
-		<view class="upNav" v-if="showMenu">
+		<!-- <view class="upNav" v-if="showMenu">
 			<view 
 				@click="toPage(item)"
 				v-for="(item, index) in upNav" 
@@ -19,7 +19,7 @@
 				class="nav-item">
 				<image :src="index == currentId ? item.a_icon : item.icon"></image>
 			</view>
-		</view>
+		</view> -->
 	</block>
 	
 </template>
