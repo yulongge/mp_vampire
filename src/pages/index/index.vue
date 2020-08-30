@@ -31,6 +31,9 @@ export default {
 			share: state => state.config.config.share
 		})
 	},
+	onShow(option) {
+		console.log(option, 'onShow')
+	},
 	onLoad() {
 		this.$store.dispatch("home/getHome");
 	},

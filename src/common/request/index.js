@@ -18,7 +18,7 @@ function newParam(param) { //参数组合
 	}
 }
 
-function request(url, param, callback, type) {
+function request(url, param, callback, type, file_type) {
 	showLoading();
 	return fly.request(url, newParam(param), {
 		method: type
@@ -27,6 +27,8 @@ function request(url, param, callback, type) {
 		OnError(res.data);
 		if(callback)
 			callback();
+		if(file_type == "md")
+			return res;
 		if("result" in res.data) {
 			return res.data.result;
 		}
@@ -38,8 +40,8 @@ function request(url, param, callback, type) {
 	})
 }
 
-function get(url, param, callback) { //get方式
-	return request(url, param, callback, 'get');
+function get(url, param, callback, file_type) { //get方式
+	return request(url, param, callback, 'get', file_type);
 }
 
 function post(url, param, callback) { //post方式

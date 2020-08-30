@@ -12,7 +12,8 @@
 			"path": "pages/article/article",
 			"style": {
 				"navigationBarTitleText": "Article",
-				"navigationStyle": "custom"
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
 			}
 		},
 		{
@@ -27,6 +28,12 @@
 			"style": {
 				"navigationBarTitleText": "添加",
 				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/article_detail/article_detail",
+			"style": {
+				"navigationBarTitleText": "详情"
 			}
 		}
 	],

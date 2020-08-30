@@ -1,9 +1,10 @@
 <script>
 	export default {
-		onLaunch: function() {
-
+		onLaunch: function(option) {
+			console.log(option, 'onLaunch')
 		},
-		onShow: function() {
+		onShow: function(option) {
+			console.log(option, 'app onShow')
 			this.$store.dispatch("config/getConfig");
 		},
 		onHide: function() {
