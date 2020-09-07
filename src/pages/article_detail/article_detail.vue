@@ -11,7 +11,8 @@
 	export default {
 		data() {
 			return {
-				
+				shareTitle: "",
+				shareImg: ""
 			}
 		},
 		components: {
@@ -24,8 +25,26 @@
 		},
 		onLoad(option) {
 			console.log(option, 'onLoad')
-			const {url} = option;
+			const {url, title, pic} = option;
 			this.$store.dispatch("article/getMarkdown", url);
+			this.shareTitle = title;
+			this.shareImg = pic;
+		},
+		onShareAppMessage(res) {
+			console.log(this, 'onShareAppMessage')
+		    if (res.from === 'button') {// 来自页面内分享按钮
+				console.log(res.target)
+		    }
+		    return {
+				title: this.shareTitle,
+				imageUrl: this.shareImg
+		    }
+		},
+		onShareTimeline() {
+			return {
+				title: this.shareTitle,
+				imageUrl: this.shareImg
+			}
 		}
 	}
 </script>
