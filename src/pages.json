@@ -17,6 +17,14 @@
 			}
 		},
 		{
+			"path": "pages/interview/interview",
+			"style": {
+				"navigationBarTitleText": "吸血鬼题库",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
 			"path": "pages/mine/mine",
 			"style": {
 				"navigationBarTitleText": "Mine",
