@@ -1,13 +1,17 @@
 <template>
 	<view class="article-detail">
+		<image :src="shareImg" mode="widthFix" class="pic"></image>
 		<wxParse v-if="detail.length" :content="detail"/>
+		<Nav v-bind:nav="nav" v-bind:currentId="0" v-bind:upNav="upNav"/>
 	</view>
 </template>
 
 <script>
 	import { mapState, mapActions, mapGetters } from 'vuex'
 	import marked from 'marked'
-	import wxParse from 'mpvue-wxparse'
+	import wxParse from 'mpvue-wxparse';
+	import Nav from '@/components/nav/nav';
+	
 	export default {
 		data() {
 			return {
@@ -16,11 +20,14 @@
 			}
 		},
 		components: {
-			wxParse
+			wxParse,
+			Nav
 		},
 		computed: {
 			...mapState({
-				detail: state => marked(state.article.articleDetail)
+				detail: state => marked(state.article.articleDetail),
+				nav: state => state.config.config.nav,
+				upNav: state => state.config.config.upNav
 			})
 		},
 		onLoad(option) {
@@ -29,6 +36,9 @@
 			this.$store.dispatch("article/getMarkdown", url);
 			this.shareTitle = title;
 			this.shareImg = pic;
+			uni.setNavigationBarTitle({
+			    title: title
+			});
 		},
 		onShareAppMessage(res) {
 			console.log(this, 'onShareAppMessage')

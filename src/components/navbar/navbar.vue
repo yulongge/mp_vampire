@@ -1,6 +1,7 @@
 <template>
 	<view class="component-navbar">
-		<view class="back" @click="goBack"></view>
+		<!-- <view class="back" @click="goBack"></view> -->
+		
 	</view>
 </template>
 

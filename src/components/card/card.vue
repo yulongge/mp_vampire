@@ -1,5 +1,5 @@
 <template>
-	<view class="home-card" :class="cardClass[data.type]">
+	<view class="home-card" :class="cardClass[data.type]" @click="toDo(data)">
 		<block v-if="data.type == 0">
 			<view class="avatar">
 				<open-data type="userAvatarUrl"></open-data>
@@ -29,6 +29,14 @@
 		props: ['data'],
 		computed: {
 			
+		},
+		methods: {
+			toDo(item) {
+				console.log(item, 'ToDo')
+				uni.redirectTo({
+					url: item.url
+				})
+			}
 		}
 	}
 </script>

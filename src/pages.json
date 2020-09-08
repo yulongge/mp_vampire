@@ -11,7 +11,7 @@
 		{
 			"path": "pages/article/article",
 			"style": {
-				"navigationBarTitleText": "Article",
+				"navigationBarTitleText": "吸血鬼日记",
 				"navigationBarBackgroundColor": "#FFFFFF",
 				"navigationBarTextStyle": "black"
 			}

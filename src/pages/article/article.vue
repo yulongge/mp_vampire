@@ -12,11 +12,13 @@
 				</view>
 			</view>
 		</view>
+		<Nav v-bind:nav="nav" v-bind:currentId="0" v-bind:upNav="upNav"/>
 	</view>
 </template>
 
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex'
+import Nav from '@/components/nav/nav';
 
 export default {
 	data() {
@@ -25,10 +27,12 @@ export default {
 		}
 	},
 	components: {
-		
+		Nav
 	},
 	computed: {
 		...mapState({
+			nav: state => state.config.config.nav,
+			upNav: state => state.config.config.upNav,
 			articles: state => state.article.articles
 		})
 	},
