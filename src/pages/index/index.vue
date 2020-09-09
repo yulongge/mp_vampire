@@ -26,7 +26,7 @@ export default {
 			config: state => state.config.config,
 			nav: state => state.config.config.nav,
 			upNav: state => state.config.config.upNav,
-			cards: state => state.home.cards,
+			cards: state => state.home.cards.filter(item => item.show != false),
 			homeBg: state => state.home.homeBg,
 			share: state => state.config.config.share
 		})

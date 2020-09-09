@@ -1,7 +1,10 @@
 <template>
 	<view class="page-interview">
 		<view class="interview-list">
-			<view class="interview-item" v-for="(item, index) in interviews" :key="index">
+			<view class="interview-item"
+				@click="toQuestionPage(item)"
+				v-for="(item, index) in interviews" 
+				:key="index">
 				{{item.title}}
 			</view>
 		</view>
@@ -31,6 +34,14 @@
 		onLoad() {
 			this.$store.dispatch("interview/getInterviews");
 		},
+		methods: {
+			toQuestionPage(item) {
+				console.log(item, 'toQuestionPage')
+				uni.redirectTo({
+					url: `${item.url}?title=${item.title}`
+				})
+			}
+		}
 	}
 </script>
 

@@ -4,7 +4,7 @@
 		<view class="nav" v-if="showMenu">
 			<view 
 				@click="toPage(item)"
-				v-for="(item, index) in nav" 
+				v-for="(item, index) in navData" 
 				:key="item.id" 
 				class="nav-item">
 				<image :src="index == currentId ? item.a_icon : item.icon"></image>
@@ -32,6 +32,11 @@
 			}
 		},
 		props: ['nav', 'upNav', 'currentId'],
+		computed: {
+			navData: function() {
+				return this.nav && this.nav.filter(item => item.show);
+			}
+		},
 		methods: {
 			switchMenu() {
 				this.showMenu = !this.showMenu
