@@ -4,7 +4,8 @@ import config from './modules/config';
 import home from './modules/home';
 import card from './modules/card';
 import article from './modules/article';
-import interview from './modules/interview'
+import interview from './modules/interview';
+import question from './modules/question'
 import api from '../common/app_request';
 
 Vue.use(Vuex);
@@ -16,7 +17,8 @@ export default new Vuex.Store({
 		home,
 		card,
 		article,
-		interview
+		interview,
+		question
 	},
 	strict: debug,
 	//plugins: debug ? [createLogger()] : []
