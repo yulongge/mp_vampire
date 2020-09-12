@@ -33,13 +33,6 @@
 			}
 		},
 		{
-			"path": "pages/mine/mine",
-			"style": {
-				"navigationBarTitleText": "Mine",
-				"navigationStyle": "custom"
-			}
-		},
-		{
 			"path": "pages/article_detail/article_detail",
 			"style": {
 				"navigationBarTitleText": "详情"

@@ -34,6 +34,22 @@
 		onLoad() {
 			this.$store.dispatch("interview/getInterviews");
 		},
+		onShareAppMessage(res) {
+			console.log(this, 'onShareAppMessage')
+		    if (res.from === 'button') {// 来自页面内分享按钮
+				console.log(res.target)
+		    }
+		    return {
+				title: "吸血鬼题库",
+				imageUrl: "https://7661-vampire-2d0c42-1302906344.tcb.qcloud.la/markdown/images/saved.png"
+		    }
+		},
+		onShareTimeline() {
+			return {
+				title: "吸血鬼题库",
+				imageUrl: "https://7661-vampire-2d0c42-1302906344.tcb.qcloud.la/markdown/images/saved.png"
+			}
+		},
 		methods: {
 			toQuestionPage(item) {
 				console.log(item, 'toQuestionPage')

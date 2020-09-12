@@ -2,10 +2,11 @@
 	export default {
 		onLaunch: function(option) {
 			console.log(option, 'onLaunch')
+			this.$store.dispatch("config/getConfig");
 		},
 		onShow: function(option) {
 			console.log(option, 'app onShow')
-			this.$store.dispatch("config/getConfig");
+			
 		},
 		onHide: function() {
 			//console.log('App Hide')
