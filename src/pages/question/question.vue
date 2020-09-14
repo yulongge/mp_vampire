@@ -56,7 +56,8 @@
 			})
 		},
 		onLoad(option) {
-			const {title} = option;
+			let {title} = option;
+			title = decodeURIComponent(title);
 			console.log(title, 'title')
 			this.shareTitle = title;
 			uni.setNavigationBarTitle({
