@@ -33,11 +33,11 @@
 		onLoad(option) {
 			console.log(option, 'onLoad')
 			const {url, title, pic} = option;
-			this.$store.dispatch("article/getMarkdown", url);
-			this.shareTitle = title;
-			this.shareImg = pic;
+			this.$store.dispatch("article/getMarkdown", decodeURIComponent(url));
+			this.shareTitle = decodeURIComponent(title);
+			this.shareImg = decodeURIComponent(pic);
 			uni.setNavigationBarTitle({
-			    title: title
+			    title: decodeURIComponent(title)
 			});
 		},
 		onShareAppMessage(res) {
