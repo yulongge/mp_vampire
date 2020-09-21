@@ -1,6 +1,6 @@
  ## 有哪些常用的meta标签？
 
-meta标签由name和content两个属性来定义，来描述一个HTML网页文档的元信息，例如作者、日期和时间、网页描述、关键词、页面刷新等，除了一些http标准规定了一些name作为大家使用的共识，开发者也可以自定义name
+meta标签由name和content两个属性来定义，来描述一个HTML网页文档的元信息(meta-information)，例如作者、日期和时间、网页描述、关键词、页面刷新等，除了一些http标准规定了一些name作为大家使用的共识，开发者也可以自定义name
 
 - charset，用于描述HTML文档的编码形式
 
