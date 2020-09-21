@@ -18,7 +18,7 @@
 			
 			
 		</view>
-		<view v-else class="nodata">
+		<view v-else-if="!loading" class="nodata">
 			<view class="nodata-icon"></view>
 			<text>暂无数据</text>
 		</view>
@@ -37,7 +37,8 @@
 		data() {
 			return {
 				currentIndex: 0,
-				shareTitle: ''
+				shareTitle: '',
+				loading: true
 			}
 		},
 		components: {
@@ -56,6 +57,7 @@
 			})
 		},
 		onLoad(option) {
+			const _this = this;
 			let {title} = option;
 			title = decodeURIComponent(title);
 			console.log(title, 'title')
@@ -63,7 +65,9 @@
 			uni.setNavigationBarTitle({
 			    title: title
 			});
-			this.$store.dispatch("question/getQuestions", {title});
+			this.$store.dispatch("question/getQuestions", {title}).then(rst => {
+				_this.loading = false;
+			});
 		},
 		onShareAppMessage(res) {
 			console.log(this, 'onShareAppMessage')
