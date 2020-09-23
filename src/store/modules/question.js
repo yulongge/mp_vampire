@@ -24,13 +24,13 @@ const getters = {
 const actions = {
 	getQuestions({state, commit}, params) {
 		console.log(params, 'params')
-		getQuestionData({...params}).then(rst => {
+		return getQuestionData({...params}).then(rst => {
 			console.log(params, 'initQuestion')
 			commit("initQuestion", rst)
 		})
 	},
 	getAnswer({state, commit}, url) {
-		getMarkdownData(url, {}).then(rst => {
+		return getMarkdownData(url, {}).then(rst => {
 			console.log(rst, 'answer')
 			commit("initAnswer", rst.data);
 		})

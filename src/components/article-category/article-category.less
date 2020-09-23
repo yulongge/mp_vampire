@@ -1,0 +1,34 @@
+.component-caterory {
+	position: fixed;
+	top: 0rpx;
+	left: 0rpx;
+	background-color: #FFFFFF;
+	height: 80rpx;
+	width: 100%;
+	padding: 0rpx 20rpx;
+	padding: 10rpx;
+	border-bottom-left-radius: 20rpx;
+	border-bottom-right-radius: 20rpx;
+	box-sizing: border-box;
+	.category-list {
+		overflow: auto;
+		white-space: nowrap;
+		padding: 0rpx 10rpx;
+		box-sizing: border-box;
+		&::-webkit-scrollbar {
+			display: none;
+			//width: 0 !important 
+		}
+		.category-item {
+			display: inline-block;
+			background-color: #f1f2f4;
+			margin-right: 20rpx;
+			line-height: 60rpx;
+			border-radius: 20rpx;
+			padding: 0rpx 20rpx;
+			color: #49505a;
+		}
+	}
+	
+	
+}

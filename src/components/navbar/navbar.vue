@@ -18,7 +18,7 @@
 				uni.navigateBack({
 					delta: 1
 				})
-				uni.redirectTo({
+				uni.navigateTo({
 					url: "/pages/index/index"
 				})
 			}

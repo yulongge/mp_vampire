@@ -1,5 +1,6 @@
 <template>
 	<view class="page-article">
+		<Category v-if="category.length" :category="category" @filterCategory="filterCategory"/>
 		<view class="artilce-list">
 			<view class="artilce-item" v-for="(item, index) in articles" :key="index" @click="toDetail(item)">
 				<view class="title">{{item.title}}</view>
@@ -12,6 +13,10 @@
 				</view>
 			</view>
 		</view>
+		<view v-if="articles.length == 0 && loading == false"  class="nodata">
+			<view class="nodata-icon"></view>
+			<text>暂无数据</text>
+		</view>
 		<Nav v-bind:nav="nav" v-bind:currentId="0" v-bind:upNav="upNav"/>
 	</view>
 </template>
@@ -19,33 +24,43 @@
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex'
 import Nav from '@/components/nav/nav';
+import Category from '@/components/article-category/article-category.vue';
 
 export default {
 	data() {
 		return {
-			
+			loading: true
 		}
 	},
 	components: {
-		Nav
+		Nav,
+		Category
 	},
 	computed: {
 		...mapState({
 			nav: state => state.config.config.nav,
 			upNav: state => state.config.config.upNav,
-			articles: state => state.article.articles
+			articles: state => state.article.articles,
+			category: state => state.article.category
 		})
 	},
 	onLoad() {
-		this.$store.dispatch("article/getArticles");
+		const _this = this;
+		this.$store.dispatch("article/getArticles").then(() => {
+			_this.loading = false
+		});
+		this.$store.dispatch("article/getCategory");
 	},
 	methods: {
 		toDetail(item) {
 			const {url, title, pic} = item;
 			console.log(url, title, pic,'toDetail')
-			uni.redirectTo({
+			uni.navigateTo({
 				url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}`
 			})
+		},
+		filterCategory(item) {
+			this.$store.dispatch("article/getArticles", {type: item.type});
 		}
 	},
 	onShareAppMessage(res) {

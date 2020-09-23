@@ -20,3 +20,4 @@ export const getHomeData = (params, callback) => getData('home', params);
 export const getArticleData = (params, callback) => getData('article', params, 'list');
 export const getInterviewData = (params, callback) => getData('interview', params, 'list');
 export const getQuestionData = (params, callback) => getData('question', params, 'list');
+export const getArticleCategory = (params, callback) => getData('article_category', params, 'list');

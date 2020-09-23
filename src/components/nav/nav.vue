@@ -42,8 +42,7 @@
 				this.showMenu = !this.showMenu
 			},
 			toPage(item) {
-				console.log(item, 'toPage')
-				uni.redirectTo({
+				uni.navigateTo({
 					url: item.url
 				})
 			}

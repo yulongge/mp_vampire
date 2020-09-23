@@ -1,5 +1,6 @@
 import {
-	getArticleData
+	getArticleData,
+	getArticleCategory
 } from '../../common/cloud_request.js';
 import {
 	getMarkdownData
@@ -7,7 +8,8 @@ import {
 const state = () => {
 	return {
 		articles: [],
-		articleDetail: ""
+		articleDetail: "",
+		category: [],
 	}	
 }
 const getters = {
@@ -17,21 +19,34 @@ const getters = {
 	},
 	articleDetail: (state, getters, rootState) => {
 		return state.articleDetail
+	},
+	category: (state, getters, rootState) => {
+		return state.category
 	}
 }
 
 const actions = {
 	getArticles({state, commit}, config) {
-		getArticleData({}).then(rst => {
+		let param = {};
+		if(config && config.type) {
+			param.type = config.type;
+		}
+		return getArticleData({...param}).then(rst => {
 			console.log(rst, 'article')
 			commit("initArticle", rst)
 		})
 		
 	},
 	getMarkdown({state, commit}, url) {
-		getMarkdownData(url, {}).then(rst => {
+		return getMarkdownData(url, {}).then(rst => {
 			console.log(rst, 'article detail')
 			commit("initArticleDetail", rst.data);
+		})
+	},
+	getCategory({state, commit}) {
+		return getArticleCategory({}).then(rst => {
+			console.log(rst, 'getArticleCategory')
+			commit("initCategory", rst);
 		})
 	}
 }
@@ -42,6 +57,9 @@ const mutations = {
 	},
 	initArticleDetail(state, data) {
 		state.articleDetail = data;
+	},
+	initCategory(state, data) {
+		state.category = data;
 	}
 }
 

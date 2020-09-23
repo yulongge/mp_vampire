@@ -53,7 +53,7 @@
 		methods: {
 			toQuestionPage(item) {
 				console.log(item, 'toQuestionPage')
-				uni.redirectTo({
+				uni.navigateTo({
 					url: `${item.url}?title=${item.title}`
 				})
 			}

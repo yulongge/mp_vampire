@@ -1,5 +1,6 @@
 <template>
 	<view class="index-page" :style="{backgroundImage:'url(' + homeBg + ')'}">
+		<Card v-bind:data="articles" type="recommend"/>
 		<Card v-for="(item) in cards" :key="item.id" v-bind:data="item"/>
 		<Nav v-bind:nav="nav" v-bind:currentId="0" v-bind:upNav="upNav"/>
 		<official-account></official-account>
@@ -28,7 +29,8 @@ export default {
 			upNav: state => state.config.config.upNav,
 			cards: state => state.home.cards.filter(item => item.show != false),
 			homeBg: state => state.home.homeBg,
-			share: state => state.config.config.share
+			share: state => state.config.config.share,
+			articles: state => state.article.articles,
 		})
 	},
 	onShow(option) {
@@ -36,6 +38,7 @@ export default {
 	},
 	onLoad() {
 		this.$store.dispatch("home/getHome");
+		this.$store.dispatch("article/getArticles")
 	},
 	methods: {
 
