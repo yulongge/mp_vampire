@@ -38,7 +38,7 @@ export default {
 	},
 	onLoad() {
 		this.$store.dispatch("home/getHome");
-		this.$store.dispatch("article/getArticles")
+		this.$store.dispatch("article/getArticles", {limit: 10})
 	},
 	methods: {
 

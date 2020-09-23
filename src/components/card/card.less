@@ -47,6 +47,10 @@
 		.con {
 			overflow: auto;
 			white-space: nowrap;
+			&::-webkit-scrollbar {
+				display: none;
+				//width: 0 !important 
+			}
 			.item {
 				width: 220rpx;
 				height: 400rpx;

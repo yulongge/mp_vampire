@@ -31,6 +31,9 @@ const actions = {
 		if(config && config.type) {
 			param.type = config.type;
 		}
+		if(config && config.limit) {
+			param.limit = config.limit;
+		}
 		return getArticleData({...param}).then(rst => {
 			console.log(rst, 'article')
 			commit("initArticle", rst)
