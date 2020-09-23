@@ -2,12 +2,15 @@
 const db = uniCloud.database();
 exports.main = async (event, context) => {
 	const collection = db.collection('article');
-	const {type} = event;
+	let {type, limit} = event;
 	let params = {};
 	if(type) {
 		params.type = type;
 	}
-	const res = await collection.where({
+	if(!limit) {
+		limit = 100;
+	}
+	const res = await collection.limit(limit).where({
 		...params
 	}).orderBy("sort", "desc").get();
 	return res;

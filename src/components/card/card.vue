@@ -22,7 +22,11 @@
 			<text class="desc">************************</text>
 			<view class="list">
 				<view class="con">
-					<view v-for="item in data" :key="item._id" class="item">
+					<view 
+						@click="toArticleDetail(item)"
+						v-for="item in data" 
+						:key="item._id" 
+						class="item">
 						<image :src="item.pic" mode="center"></image>
 						<text class="article-title">{{item.title}}</text>
 					</view>
@@ -58,6 +62,13 @@
 			toDo(item) {
 				uni.navigateTo({
 					url: item.url
+				})
+			},
+			toArticleDetail(item) {
+				const {url, title, pic} = item;
+				console.log(url, title, pic,'toDetail')
+				uni.navigateTo({
+					url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}`
 				})
 			}
 		}
