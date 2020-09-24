@@ -54,6 +54,7 @@ const actions = {
 		})
 	},
 	updateArticle({state, commit}, item) {
+		console.log(item, 'updateArticle')
 		return updateArticle(item).then(rst => {
 			console.log(rst, 'updateArticle')
 		})

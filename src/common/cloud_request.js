@@ -11,6 +11,7 @@ function getData(name, params, type) {
 		uni.hideLoading();
 		const {data} = res.result;
 		if(type == "list") return data;
+		if(type == "update") return res.result.updated; //更新条数
 		return data[0];
 	})
 }
@@ -21,4 +22,4 @@ export const getArticleData = (params, callback) => getData('article', params, '
 export const getInterviewData = (params, callback) => getData('interview', params, 'list');
 export const getQuestionData = (params, callback) => getData('question', params, 'list');
 export const getArticleCategory = (params, callback) => getData('article_category', params, 'list');
-export const updateArticle = (params, callback) => getData('article_update', params);
+export const updateArticle = (params, callback) => getData('article_update', params, 'update');

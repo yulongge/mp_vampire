@@ -70,10 +70,10 @@ export default {
 	},
 	methods: {
 		toDetail(item) {
-			const {url, title, pic, _id} = item;
+			const {url, title, pic, _id, read} = item;
 			console.log(url, title, pic,'toDetail')
 			uni.navigateTo({
-				url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}&id=${_id}`
+				url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}&id=${_id}&read=${read}`
 			})
 		},
 		filterCategory(item) {

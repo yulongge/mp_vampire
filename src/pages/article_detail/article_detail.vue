@@ -32,14 +32,14 @@
 		},
 		onLoad(option) {
 			console.log(option, 'onLoad')
-			const {url, title, pic, id} = option;
+			const {url, title, pic, id, read} = option;
 			this.$store.dispatch("article/getMarkdown", decodeURIComponent(url));
 			this.shareTitle = decodeURIComponent(title);
 			this.shareImg = decodeURIComponent(pic);
 			uni.setNavigationBarTitle({
 			    title: decodeURIComponent(title)
 			});
-			this.$store.dispatch("article/updateArticle", {_id: id});
+			this.$store.dispatch("article/updateArticle", {_id: id, read: read});
 		},
 		onShareAppMessage(res) {
 			console.log(this, 'onShareAppMessage')

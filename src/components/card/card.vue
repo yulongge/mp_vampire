@@ -65,10 +65,10 @@
 				})
 			},
 			toArticleDetail(item) {
-				const {url, title, pic} = item;
+				const {url, title, pic, _id, read} = item;
 				console.log(url, title, pic,'toDetail')
 				uni.navigateTo({
-					url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}`
+					url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}&id=${_id}&read=${read}`
 				})
 			}
 		}
