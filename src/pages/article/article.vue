@@ -8,9 +8,17 @@
 				<view class="pic">
 					<image :src="item.pic" mode="widthFix" lazy-load="true"></image>
 				</view>
-				<view class="author">
-					{{item.author}}
+				<view class="msg">
+					<view class="read">
+						<view class="icon"></view>
+						<text class="count">{{item.read}}</text>
+						
+					</view>
+					<view class="author">
+						{{item.author}}
+					</view>
 				</view>
+				
 			</view>
 		</view>
 		<view v-if="articles.length == 0 && loading == false"  class="nodata">
@@ -40,7 +48,16 @@ export default {
 		...mapState({
 			nav: state => state.config.config.nav,
 			upNav: state => state.config.config.upNav,
-			articles: state => state.article.articles,
+			articles: state => {
+				let articles = state.article.articles;
+				articles = articles.map(item => {
+					if(!item.read) {
+						item.read = Number.parseInt(Math.random(1,100) * 100)
+					}
+					return item;
+				});
+				return articles;
+			},
 			category: state => state.article.category
 		})
 	},
@@ -53,10 +70,10 @@ export default {
 	},
 	methods: {
 		toDetail(item) {
-			const {url, title, pic} = item;
+			const {url, title, pic, _id} = item;
 			console.log(url, title, pic,'toDetail')
 			uni.navigateTo({
-				url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}`
+				url: `/pages/article_detail/article_detail?url=${url}&title=${title}&pic=${pic}&id=${_id}`
 			})
 		},
 		filterCategory(item) {

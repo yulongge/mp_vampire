@@ -33,11 +33,33 @@
 			}
 			margin-bottom: 10rpx;
 		}
-		.author {
-			text-align: right;
-			color: #898989;
-			font-size: 24rpx;
+		.msg {
+			display: flex;
+			.read {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				.icon {
+					width: 40rpx;
+					height: 40rpx;
+					background-image: url(https://7661-vampire-2d0c42-1302906344.tcb.qcloud.la/images/icon/read.svg);
+					background-size: contain;
+				}
+				.count {
+					margin-left: 10rpx;
+					color: #898989;
+					font-size: 24rpx;
+					text-align: center;
+				}
+			}
+			.author {
+				flex: 1;
+				text-align: right;
+				color: #898989;
+				font-size: 24rpx;
+			}
 		}
+		
 		
 	}
 }

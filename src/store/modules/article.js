@@ -1,6 +1,7 @@
 import {
 	getArticleData,
-	getArticleCategory
+	getArticleCategory,
+	updateArticle
 } from '../../common/cloud_request.js';
 import {
 	getMarkdownData
@@ -50,6 +51,11 @@ const actions = {
 		return getArticleCategory({}).then(rst => {
 			console.log(rst, 'getArticleCategory')
 			commit("initCategory", rst);
+		})
+	},
+	updateArticle({state, commit}, item) {
+		return updateArticle(item).then(rst => {
+			console.log(rst, 'updateArticle')
 		})
 	}
 }
