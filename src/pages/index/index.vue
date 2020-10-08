@@ -35,10 +35,11 @@ export default {
 	},
 	onShow(option) {
 		console.log(option, 'onShow')
+		this.$store.dispatch("article/getArticles", {limit: 5})
 	},
 	onLoad() {
 		this.$store.dispatch("home/getHome");
-		this.$store.dispatch("article/getArticles", {limit: 5})
+		
 	},
 	methods: {
 

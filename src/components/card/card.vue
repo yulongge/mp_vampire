@@ -19,7 +19,7 @@
 		</view>
 		<view v-if="type=='recommend'" class="recommend-card">
 			<text class="title">为你推荐</text>
-			<text class="desc">************************</text>
+			<text class="desc"></text>
 			<view class="list">
 				<view class="con">
 					<view 
@@ -27,7 +27,7 @@
 						v-for="item in data" 
 						:key="item._id" 
 						class="item">
-						<image :src="item.pic" mode="center"></image>
+						<image :src="item.pic" mode="widthFix"></image>
 						<text class="article-title">{{item.title}}</text>
 					</view>
 				</view>

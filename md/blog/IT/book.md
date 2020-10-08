@@ -12,7 +12,7 @@
 #### 语言体系化学习
 
 ---
-`javascript dom编程艺术`
+`《javascript dom编程艺术》`
 
 ![javascript dom](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65794487c95445f9a007f923bc41a4e2~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -20,7 +20,7 @@
 
 ---
 
-`javascript高级程序设计（红宝书）`
+`《javascript高级程序设计》（红宝书）`
 
 ![javascript权威指南](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1f4cc83358f24effb1f40fb7b9a28812~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -28,7 +28,7 @@
 
 ---
 
-`深入理解JS特性`
+`《深入理解JS特性》`
 
 ![深入理解JS特性](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cacae7b6c7c843b289b2fdbcac6b5e80~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -42,7 +42,7 @@
 
 ---
 
-`JavaScript忍者秘籍（第2版）`
+`《JavaScript忍者秘籍（第2版）》`
 
 ![JavaScript忍者秘籍（第2版）](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d60b0570f9cd452a95964ad7bc4494fb~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -50,7 +50,7 @@
 这本书所有章节，都是从具体的实际问题入手，不纠结太多语法细节，非常推荐
 
 ---
-`javascript框架设计`
+`《javascript框架设计》`
 
 ![javascript框架设计](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/70ffa1d594934e11af264eb7806b5dda~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -58,7 +58,7 @@
 
 ---
 
-`javascript设计模式与开发实践`
+`《javascript设计模式与开发实践》`
 
 ![javascript设计模式与开发实践](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6bdeb0f257c84837a597a6afd05e0fa8~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -66,7 +66,7 @@
 
 ---
 
-`学习javascript数据结构和算法`
+`《学习javascript数据结构和算法》`
 
 ![](http://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b15a17be0e4747f6b4551a6fb9a9dd75~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -76,64 +76,64 @@
 
 #### 深入语言细节
 
-`avascript20周年（历史书）`
+`《javascript20周年》（历史书）`
 
 本书由 JavaScript 之父 Brendan Eich 与 ES6 规范首席作者 Allen Wirfs-Brock 联合编写，记录1995~2015共计 20 年的 JavaScript 演化经历。全书不仅讲解了大量语言技术细节层面的演进，更复盘了更高层面上规范制定与标准博弈中的历史成败，是一部讲述人类如何在商业与技术上的竞争合作中促进产业发展的故事
 
 ---
 
-`你不知道的javascript （小黄书）`
+`《你不知道的javascript》 （小黄书）`
 
 ![](http://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93e143e810584e04b7aba94dbe80b887~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 深入javascript这本语言的设计细节,首先推荐小黄书系列，你不知道的javascript，英文版github开源，但是我觉得看上册就够了，深入了解原型链，this，闭包，词法作用域等，第一次读到感觉重塑了对js的理解，中册也还不错，关于异步编程和生成器的内容值得一读，下册就算了，就是介绍了一点es6， 期待第二版
 
 ---
-`how javascript works`
+`《how javascript works》`
 
 ![](http://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/858f0599806d4cce9fc7ef7d437b3ce1~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 还有一本就是精粹的作者写的 how javascript works，我还在等国内发行，github有开源的版本可以阅读，探究js的执行原理和一些高级的api，比如v8引擎，内存管理，webassembly,mutationObserver, 性能优化，语法解析，shaodowdom等方方面面，据说中文版死月翻译中，期待一下
 
 ---
-`javascript语言精粹与编程实践`
+`《javascript语言精粹与编程实践》`
 
 ![](http://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c4dec69b2af348dd8561b0ff6be89947~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 然后重磅推荐我认为讲解js的《九阴真经》，绿宝书，《javascript语言精髓与编程实践》，第三版比第二版足足厚了一倍，不是着重于某些功能实现，而是讲解修炼内功的大道，开篇就是《天之道，损有余而补不足》，从结构化，面向对象，函数式，并行和动态五方面来讲解js的本质
 
 ---
-`javascript迷你正则书`
+`《javascript迷你正则书》`
 
 ![](http://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b0764178aed34c30b9de20aae070275f~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 用游戏的方式讲解js
 
 ---
-`JavaScript编程精解(第3版)`
+`《JavaScript编程精解(第3版)》`
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d3956c80f1849c1aa78e27b5fb0cff9~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 游戏式教学 体验不错
 
 ---
-`Dom启蒙`
+`《Dom启蒙》`
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c3640890e0ca4aa49bb0d1579e6be30d~tplv-k3u1fbpfcp-zoom-1.image)
 
 ---
-`javascript函数式编程指南`
+`《javascript函数式编程指南》`
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2310f39a35c34d758f3974108cce4e6e~tplv-k3u1fbpfcp-zoom-1.image)
 
 --
 
-`JavaScript异步编程`
+`《JavaScript异步编程》`
 
 ![JavaScript异步编程](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cb2d18e054bf4974aa67f0ecb06ad034~tplv-k3u1fbpfcp-zoom-1.image)
 
 ---
-`JavaScript面向对象精要`
+`《JavaScript面向对象精要》`
 
 ![JavaScript面向对象精要](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c67c38ce3df4c9791c9337e2028523c~tplv-k3u1fbpfcp-zoom-1.image)
 
