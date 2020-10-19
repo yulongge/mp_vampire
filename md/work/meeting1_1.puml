@@ -1,0 +1,8 @@
+@startuml
+
+小程序 -> 中台
+中台 -> pms
+pms-> 收银
+中台 -> 小程序
+
+@enduml
