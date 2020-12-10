@@ -6,7 +6,7 @@
 
 > 需要与林总沟通
 
-一. 需求问题
+一. 需求问题：做法，配料，备注，完全独立功能
 
 (1). 做法及备注限999个：取消999個限制 
 
@@ -39,6 +39,8 @@ Trigger: wxdc超3s
 [pv:4,request_uri:/superdiancan/pay/discount/16030872981883]
 ```
 
+
+
 1. 标版
 
 ![](https://yulongge.github.io/images/acewill/meeting1.png)
@@ -53,4 +55,15 @@ Trigger: wxdc超3s
 ![](https://yulongge.github.io/images/acewill/meeting1_1.png)
 
 
-三. 后端lavaral架构开头
+三. 汇付卡包问题
+
+> listuserbyunionid 汇付查询卡列表接口时间都在8s以上
+
+> 比如：主商户1559585913 有187个子商户，要尝试每个子商户下查找有没有这个unionid对应的会员
+
+解决方法：
+
+重新设计unionid到子商户的索引，不要跨报表，用单表索引，定时任务维护全量的汇付用户索引。
+
+
+四. 后端lavaral架构开头
