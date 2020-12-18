@@ -24,11 +24,11 @@
 			toUpload() {
 				//小程序不支持Blob对象
 				const contentJson = {"name": "geyulong", "age": "18"};
-				// const data = new OSS.Buffer(JSON.stringify(contentJson, null, 2));
-				const blob = new Blob([JSON.stringify(contentJson, null, 2)], {type : 'application/json'});
-				this.putObject(blob)
+				//const data = new OSS.Buffer(JSON.stringify(contentJson));
+				const data = new Blob([JSON.stringify(contentJson, null, 2)], {type : 'application/json'});
+				this.putObject(data)
 			},
-			async putObject (data) {
+			async putObject (data) { //Must provide Buffer/Blob/File for put
 				try {
 					// object-key可以自定义为文件名（例如file.txt）或目录（例如abc/test/file.txt）的形式，实现将文件上传至当前Bucket或Bucket下的指定目录。
 					let result = await this.store.put('order.json', data).then(rst => {
