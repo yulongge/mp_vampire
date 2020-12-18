@@ -37,6 +37,12 @@
 			"style": {
 				"navigationBarTitleText": "详情"
 			}
+		},
+		{
+			"path": "pages/tools/upload_oss/upload_oss",
+			"style": {
+				"navigationBarTitleText": "上传OSS"
+			}
 		}
 	],
 	"globalStyle": {
