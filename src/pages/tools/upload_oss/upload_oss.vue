@@ -13,12 +13,7 @@
 			}
 		},
 		onLoad() {
-			this.store = new OSS({
-				accessKeyId: 'LTAI4GCHnpDFZ85VCWHxhxNz',
-				accessKeySecret: 'mvlSTcVQ82QsFTkXwER8gBcGvc4dYf',
-				bucket: 'frontend-omp',
-				region: 'oss-cn-beijing'
-			});
+			
 		},
 		methods: {
 			toUpload() {
