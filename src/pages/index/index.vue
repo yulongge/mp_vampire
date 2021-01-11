@@ -1,5 +1,6 @@
 <template>
 	<view class="index-page" :style="{backgroundImage:'url(' + homeBg + ')'}">
+		<NavBar title="Vampire Knight" :changeColor="changeColor"/>
 		<Card v-bind:data="articles" type="recommend"/>
 		<Card v-for="(item) in cards" :key="item.id" v-bind:data="item"/>
 		<Nav v-bind:nav="nav" v-bind:currentId="0" v-bind:upNav="upNav"/>
@@ -11,16 +12,21 @@
 import { mapState, mapActions, mapGetters } from 'vuex'
 import Card from '@/components/card/card';
 import Nav from '@/components/nav/nav';
+import NavBar from '@/components/navbar/navbar';
 
 export default {
 	data() {
 		return {
-			title: 'Hello Vampire Jser'
+			title: 'Hello Vampire Jser',
+			statusHeight: 0,
+			navHeight: 0,
+			changeColor: false
 		}
 	},
 	components: {
 		Card,
-		Nav
+		Nav,
+		NavBar
 	},
 	computed: {
 		...mapState({
@@ -39,9 +45,19 @@ export default {
 	},
 	onLoad() {
 		this.$store.dispatch("home/getHome");
-		
+		this.getNavHeight();
 	},
 	methods: {
+		getNavHeight() {
+			const self = this;
+			uni.getSystemInfo({
+				success(res) {
+					var isIos = res.system.indexOf('iOS') > -1;
+					self.statusHeight = res.statusBarHeight;
+					self.navHeight = isIos ? 44 : 48;
+				}
+			})
+		},
 
 	},
 	onShareAppMessage(res) {
@@ -60,6 +76,16 @@ export default {
 			title: this.share.title,
 			imageUrl: this.share.img
 		}
+	},
+	onPageScroll(e) {
+		const { statusHeight, navHeight } = this;
+		console.log(statusHeight, navHeight, 'oPageScrill')
+		const { scrollTop } = e;
+		
+		let changeColor = scrollTop >= statusHeight + navHeight ? true : false;
+		console.log(scrollTop, statusHeight, navHeight, changeColor, 'changeColor')
+		this.changeColor = changeColor
+
 	}
 }
 </script>

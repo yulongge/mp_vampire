@@ -1,12 +1,88 @@
-.component-navbar {
+.components-navbar {
 	position: fixed;
-	top: 60rpx;
-	left: 0rpx;
-	padding: 0rpx 20rpx;
-	.back {
-		background-image: url("https://7661-vampire-2d0c42-1302906344.tcb.qcloud.la/images/icon/back.svg");
-		width: 40rpx;
-		height: 40rpx;
-		background-size: contain;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+	.status {
+		width: 100%;
+	}
+	.navbar {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+	}
+	.location {
+		padding-left: 20rpx;
+		display: flex;
+		align-items: center;
+		.gprs_icon {
+			width: 32rpx;
+			height: 32rpx;
+			//background-image: url('@{img}gprs_icon.png');
+			background-size: contain;
+
+		}
+		.cityname {
+			margin-left: 10rpx;
+			margin-right: 10rpx;
+			color: #ffffff;
+			font-size: 28rpx;
+		}
+		.arrow_icon {
+			width: 14rpx;
+			height: 10rpx;
+			//background-image: url('@{img}arrow_down.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.navbar_back {
+		padding: 0 32rpx;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100%;
+	}
+
+	.navbar_back image {
+		width: 21rpx;
+		height: 34rpx;
+	}
+
+	.navbar_title {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: -1;
+	}
+	.navbar_title view {
+		width: 40%;
+		word-break: break-all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 38rpx;
+		color: #ffffff;
 	}
 }
+.changeColor {
+	.status, .navbar_title {
+		background-color: rgba(255, 255, 255, .8);
+	    view {
+			color: #333333;
+			font-weight: bold;
+		}
+		
+	}
+}
+  
+  
