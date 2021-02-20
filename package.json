@@ -82,7 +82,7 @@
     "klaw-sync": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
-    "marked": "^1.1.1",
+    "marked": "^2.0.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "mpvue-wxparse": "^0.6.5",
